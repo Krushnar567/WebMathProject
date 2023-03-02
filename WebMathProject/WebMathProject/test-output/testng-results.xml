@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-03-02T21:39:41 IST" name="Default suite" finished-at="2023-03-02T21:40:18 IST" duration-ms="36578">
+    <groups>
+    </groups>
+    <test started-at="2023-03-02T21:39:41 IST" name="Default test" finished-at="2023-03-02T21:40:18 IST" duration-ms="36578">
+      <class name="webMathProject.FactorAnIntegerTest">
+        <test-method is-config="true" signature="launchURL()[pri:0, instance:webMathProject.FactorAnIntegerTest@290222c1]" started-at="2023-03-02T21:39:41 IST" name="launchURL" finished-at="2023-03-02T21:40:04 IST" duration-ms="22342" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchURL -->
+        <test-method signature="factorAnIntegerTest()[pri:0, instance:webMathProject.FactorAnIntegerTest@290222c1]" started-at="2023-03-02T21:40:04 IST" name="factorAnIntegerTest" finished-at="2023-03-02T21:40:18 IST" duration-ms="14052" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- factorAnIntegerTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:webMathProject.FactorAnIntegerTest@290222c1]" started-at="2023-03-02T21:40:18 IST" name="afterClass" finished-at="2023-03-02T21:40:18 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- webMathProject.FactorAnIntegerTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="webMathProject.AboutWebMathPage"/>
+      <class name="webMathProject.AdvertisementTest"/>
+      <class name="webMathProject.AlgebraPage "/>
+      <class name="webMathProject.ContactUsPage"/>
+      <class name="webMathProject.FactorAnIntegerTest"/>
+      <class name="webMathProject.GeneralMathPage"/>
+      <class name="webMathProject.HomePage"/>
+      <class name="webMathProject.KindergartenMathPage"/>
+      <class name="webMathProject.MathForEveryonePage"/>
+      <class name="webMathProject.OtherMathStuffPage "/>
+      <class name="webMathProject.PlotsAndGeometryPage"/>
+      <class name="webMathProject.PrivacyPolicyPage"/>
+      <class name="webMathProject.TitleTest "/>
+      <class name="webMathProject.TrigonometryAndCalculusPage"/>
+      <class name="webMathProject.UnitsConversionsOnLength"/>
+      <class name="webMathProject.WebMathPage"/>
+      <class name="webMathProject.WebsiteMapPage"/>
+      <class name="webMathProject.WhyWebmathPage"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
