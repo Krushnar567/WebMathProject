@@ -19,8 +19,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 
 public class MathForEveryonePage {
-WebDriver driver;
-Properties p = new Properties();
+        WebDriver driver;
+        Properties p = new Properties();
 
 @Test
 public void mathForEveryonePage() throws IOException {
@@ -34,19 +34,18 @@ public void mathForEveryonePage() throws IOException {
  @BeforeClass
  public void launchURL() throws IOException {
 	  
-	    WebDriverManager.chromedriver().setup();
-
-		driver = new ChromeDriver();
+	  WebDriverManager.chromedriver().setup();
+          driver = new ChromeDriver();
 		
-		FileInputStream fis = new FileInputStream("C:\\Users\\krush\\OneDrive\\Desktop\\Excelr\\WebMathProject\\src\\test\\java\\com\\utils\\data.properties");
+	  FileInputStream fis = new FileInputStream("C:\\Users\\krush\\OneDrive\\Desktop\\Excelr\\WebMathProject\\src\\test\\java\\com\\utils\\data.properties");
 	    
-	    p.load(fis);
+	   p.load(fis);
 	    
-	    driver.get(p.getProperty("url"));
-		driver.manage().window().maximize();
+	   driver.get(p.getProperty("url"));
+	   driver.manage().window().maximize();
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+	   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	   driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	  
 	}
 
