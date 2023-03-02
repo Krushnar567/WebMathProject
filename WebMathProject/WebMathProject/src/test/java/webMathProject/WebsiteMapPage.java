@@ -18,49 +18,48 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 
 public class WebsiteMapPage {
-  WebDriver driver;
-  Properties p = new Properties();
+        WebDriver driver;
+        Properties p = new Properties();
   
   @Test
   public void websiteMapPage() throws IOException {
 	  
 	  
-	    WebElement generalMath = driver.findElement(By.xpath(p.getProperty("generalMath")));
+	WebElement generalMath = driver.findElement(By.xpath(p.getProperty("generalMath")));
       
         generalMath.click();
       
         WebElement websiteMap = driver.findElement(By.xpath(p.getProperty("websiteMap")));
         
         websiteMap.click();
-     
-	  
+       
 }
 
   @BeforeClass
    public void launchURL() throws IOException {
 	  
 	  
-	    WebDriverManager.chromedriver().setup();
+	  WebDriverManager.chromedriver().setup();
 
-		driver = new ChromeDriver();
+	driver = new ChromeDriver();
 		
-		FileInputStream fis = new FileInputStream("C:\\Users\\krush\\OneDrive\\Desktop\\Excelr\\WebMathProject\\src\\test\\java\\com\\utils\\data.properties");
+	FileInputStream fis = new FileInputStream("C:\\Users\\krush\\OneDrive\\Desktop\\Excelr\\WebMathProject\\src\\test\\java\\com\\utils\\data.properties");
 	   
-	    p.load(fis);
+	p.load(fis);
 	    
-	    driver.get(p.getProperty("url"));
-		driver.manage().window().maximize();
+	driver.get(p.getProperty("url"));
+	driver.manage().window().maximize();
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	  
 	}
+	
   @AfterClass
    public void closeBrowser() {
 	  
-	    driver.close();
-	  
-	  
-}
+	driver.close();
+	    
+     }
 
 }
