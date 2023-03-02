@@ -23,10 +23,10 @@ public class TitleTest {
   @Test
   public void titleTest() throws IOException {
 	  
-	    WebElement home = driver.findElement(By.xpath(p.getProperty("home")));
-        home.click();
+	        WebElement home = driver.findElement(By.xpath(p.getProperty("home")));
+                home.click();
         
-        String expectedTitle = "WebMath - Solve Your Math Problem";
+                String expectedTitle = "WebMath - Solve Your Math Problem";
 		
 		String actualTitle = driver.getTitle();
 		
@@ -48,15 +48,15 @@ public class TitleTest {
    public void launchURL() throws IOException {
 	  
 	  
-	    WebDriverManager.chromedriver().setup();
+	         WebDriverManager.chromedriver().setup();
 
 		driver = new ChromeDriver();
 		
 		FileInputStream fis = new FileInputStream("C:\\Users\\krush\\OneDrive\\Desktop\\Excelr\\WebMathProject\\src\\test\\java\\com\\utils\\data.properties");
 	   
-	    p.load(fis);
+	        p.load(fis);
 	    
-	    driver.get(p.getProperty("url"));
+	        driver.get(p.getProperty("url"));
 		driver.manage().window().maximize();
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -67,7 +67,7 @@ public class TitleTest {
   @AfterClass
    public void closeBrowser() {
 	  
-	    driver.close();
+	       driver.close();
 	  
 	  
    }
