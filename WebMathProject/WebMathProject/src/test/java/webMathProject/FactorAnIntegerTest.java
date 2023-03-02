@@ -28,7 +28,7 @@ public class FactorAnIntegerTest {
       generalMath.click();
       
       WebElement factor = driver.findElement(By.xpath(p.getProperty("factor")));
-	  factor.click();
+      factor.click();
       
       WebElement number = driver.findElement(By.xpath(p.getProperty("number")));
       number.sendKeys(p.getProperty("num"));
@@ -43,23 +43,23 @@ public class FactorAnIntegerTest {
   @BeforeClass
   public void launchURL() throws IOException {
 	  
-	  WebDriverManager.chromedriver().setup();
+      WebDriverManager.chromedriver().setup();
       driver = new ChromeDriver();
 	
-	  FileInputStream fis = new FileInputStream("C:\\Users\\krush\\OneDrive\\Desktop\\Excelr\\WebMathProject\\src\\test\\java\\com\\utils\\data.properties");
-	  p.load(fis);
+      FileInputStream fis = new FileInputStream("C:\\Users\\krush\\OneDrive\\Desktop\\Excelr\\WebMathProject\\src\\test\\java\\com\\utils\\data.properties");
+      p.load(fis);
 	    
-	  driver.get(p.getProperty("url"));
-	  driver.manage().window().maximize();
+      driver.get(p.getProperty("url"));
+      driver.manage().window().maximize();
 		
-	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-	  driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+      driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	  
 	}
 
   @AfterClass
   public void afterClass() {
-	 driver.close();
+     driver.close();
   }
 
 }
