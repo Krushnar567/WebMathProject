@@ -25,7 +25,7 @@ import org.testng.annotations.AfterClass;
  @Test
  public void unitsConversionsOnLength() throws IOException {
 	  
-	    WebElement mathForEveryone = driver.findElement(By.xpath(p.getProperty("mathForEveryone")));
+	WebElement mathForEveryone = driver.findElement(By.xpath(p.getProperty("mathForEveryone")));
       
         mathForEveryone.click();
 	  
@@ -38,15 +38,15 @@ import org.testng.annotations.AfterClass;
         
         WebElement unit1 = driver.findElement(By.xpath(p.getProperty("unit1")));
         Select drop1 = new Select (unit1);
-  	    drop1.selectByIndex(0);
+  	drop1.selectByIndex(0);
   	    
 		
-	    WebElement unit2 = driver.findElement(By.xpath(p.getProperty("unit2")));
-		Select drop2 = new Select (unit2); 
-		drop2.selectByIndex(1);
+	WebElement unit2 = driver.findElement(By.xpath(p.getProperty("unit2")));
+	Select drop2 = new Select (unit2); 
+	drop2.selectByIndex(1);
 		  
-		WebElement convert = driver.findElement(By.xpath(p.getProperty("convert")));
-		convert.click();
+	WebElement convert = driver.findElement(By.xpath(p.getProperty("convert")));
+	convert.click();
 		  
   }
   
@@ -54,19 +54,19 @@ import org.testng.annotations.AfterClass;
   public void launchURL() throws IOException {
 	  
 	  
-	    WebDriverManager.chromedriver().setup();
+	 WebDriverManager.chromedriver().setup();
 
-		driver = new ChromeDriver();
+	driver = new ChromeDriver();
 		
-		FileInputStream fis = new FileInputStream("C:\\Users\\krush\\OneDrive\\Desktop\\Excelr\\WebMathProject\\src\\test\\java\\com\\utils\\data.properties");
+	FileInputStream fis = new FileInputStream("C:\\Users\\krush\\OneDrive\\Desktop\\Excelr\\WebMathProject\\src\\test\\java\\com\\utils\\data.properties");
 	    
-	    p.load(fis);
+	p.load(fis);
 	    
-	    driver.get(p.getProperty("url"));
-		driver.manage().window().maximize();
+	driver.get(p.getProperty("url"));
+	driver.manage().window().maximize();
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	  
 	}
 
